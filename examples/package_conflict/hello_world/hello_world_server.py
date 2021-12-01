@@ -33,7 +33,7 @@ from concurrent.futures import ThreadPoolExecutor
 import grpc
 import grpc_reflection.v1alpha.reflection
 
-from hello_world import HelloWorldServicer, hello_world_pb2, hello_world_pb2_grpc
+from hello_world.hello_world_servicer import HelloWorldServicer, hello_world_pb2, hello_world_pb2_grpc
 
 
 def server_main() -> None:
@@ -57,6 +57,10 @@ def server_main() -> None:
 
     for insecure_port in insecure_ports:
         server.add_insecure_port(insecure_port)
+
+    print()
+    print()
+    print("Starting server on port 50051!")
 
     server.start()
     server.wait_for_termination()

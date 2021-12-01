@@ -145,3 +145,8 @@ Traceback (most recent call last):
     from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 ModuleNotFoundError: No module named 'google.api'
 ```
+
+A possible solution is to completely remove the `protobuf`'s `google/__init__.py` file instead of
+using the `__path__` manipulation. Try removing the file named like
+`/private/var/tmp/_bazel_kris/d8a7b0be849d6541bed1bb847a481917/execroot/__main__/bazel-out/darwin-fastbuild/bin/hello_world/hello_world_server_py.runfiles/pip_deps_pypi__protobuf/google/__init__.py`
+and try running the server again.
