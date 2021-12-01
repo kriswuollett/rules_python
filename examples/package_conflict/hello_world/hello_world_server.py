@@ -1,6 +1,8 @@
 import os
 import sys
 
+print(f"Python {sys.version}")
+
 for sys_path in sys.path:
     if not os.path.isdir(sys_path):
         continue

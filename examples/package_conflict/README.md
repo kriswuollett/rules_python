@@ -9,6 +9,8 @@ $ bazel run //hello_world:hello_world_server_py
 The module `google.api` cannot be found:
 
 ```
+Python 3.9.8 (main, Nov 10 2021, 09:21:22) 
+[Clang 13.0.0 (clang-1300.0.29.3)]
 ################################################################################
 /private/var/tmp/_bazel_kris/d8a7b0be849d6541bed1bb847a481917/execroot/__main__/bazel-out/darwin-fastbuild/bin/hello_world/hello_world_server_py.runfiles/com_google_protobuf/python
 google/ (NO __init__.py)
