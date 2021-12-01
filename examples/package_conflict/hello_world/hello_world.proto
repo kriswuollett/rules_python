@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package hello_world;
+
+import "google/api/annotations.proto";
+
+message HelloWorldRequest { string name = 1; }
+
+message HelloWorldResponse { string greeting = 1; }
+
+message HelloWorldConfig { string template = 1; }
+
+service HelloWorldService {
+  rpc GetGreeting(HelloWorldRequest) returns (HelloWorldResponse) {
+    option (google.api.http) = {
+      post : "/v1/GetGreeting"
+    };
+  }
+}
